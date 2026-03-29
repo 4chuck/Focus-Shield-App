@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield Outline -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20 C44,20 30,24 24,28 C24,45 28,65 54,88 C80,65 84,45 84,28 C78,24 64,20 54,20 Z" />
+
+    <!-- Shield Inner Part -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M54,26 C46,26 34,29.5 29,32.5 C29,46 32.5,62 54,81 C75.5,62 79,46 79,32.5 C74,29.5 62,26 54,26 Z" />
+
+    <!-- Lock/Focus Symbol inside Shield -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,40 C50.7,40 48,42.7 48,46 L48,50 L46,50 C44.9,50 44,50.9 44,52 L44,62 C44,63.1 44.9,64 46,64 L62,64 C63.1,64 64,63.1 64,62 L64,52 C64,50.9 63.1,50 62,50 L60,50 L60,46 C60,42.7 57.3,40 54,40 Z M54,43 C55.7,43 57,44.3 57,46 L57,50 L51,50 L51,46 C51,44.3 52.3,43 54,43 Z" />
+</vector>
