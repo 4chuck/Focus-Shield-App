@@ -1,58 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus Shield - Download</title>
+    <title>Focus Shield - Take Back Your Time</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
-<!-- Hero Section -->
-<div class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-    <!-- App Icon Placeholder -->
-    <div class="w-24 h-24 bg-blue-600 rounded-3xl shadow-xl flex items-center justify-center mb-8 animate-bounce">
-        <i class="fa-solid fa-shield-halved text-4xl text-white"></i>
-    </div>
-
-    <h1 class="text-5xl font-black tracking-tight mb-4">Focus Shield</h1>
-    <p class="text-xl text-slate-600 max-w-lg mb-10">
-        Take control of your digital life. Block distractions, track usage, and stay productive with Strict Mode.
-    </p>
-
-    <!-- DOWNLOAD BUTTON -->
-    <!-- Note: This points to your releases folder -->
-    <a href="release/app-release.apk"
-       class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg font-bold shadow-2xl transition-all transform hover:scale-105 flex items-center gap-3">
-        <i class="fas fa-download"></i>
-        Download APK (v1.0)
-    </a>
-
-    <p class="mt-6 text-sm text-slate-400">Requires Android 8.0+</p>
-
-    <!-- Features Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-5xl">
-        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <i class="fas fa-lock text-blue-500 text-2xl mb-4"></i>
-            <h3 class="font-bold text-lg mb-2">Strict Mode</h3>
-            <p class="text-slate-500 text-sm">Cannot deactivate the shield once the limit is reached.</p>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-white text-sm"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight">Focus Shield</span>
+            </div>
+            <a href="https://github.com" class="text-slate-600 hover:text-blue-600 transition-colors">
+                <i class="fa-brands fa-github text-2xl"></i>
+            </a>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <i class="fas fa-chart-bar text-green-500 text-2xl mb-4"></i>
-            <h3 class="font-bold text-lg mb-2">Usage Insights</h3>
-            <p class="text-slate-500 text-sm">Track exactly how much time you spend on every app.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
-            <i class="fas fa-eye text-purple-500 text-2xl mb-4"></i>
-            <h3 class="font-bold text-lg mb-2">Overlay Protection</h3>
-            <p class="text-slate-500 text-sm">Instant visual blocks when your time is up.</p>
-        </div>
-    </div>
-</div>
+    </nav>
 
-<footer class="py-10 text-center text-slate-400 text-sm">
-    <p>&copy; 2024 4chuck. Developed with Focus.</p>
-</footer>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-100 rounded-full">
+                V1.0 Now Available
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                Stop Distractions. <br><span class="text-blue-600">Start Living.</span>
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                The ultimate open-source productivity shield for Android.
+                Individual app limits, <strong>Strict Mode</strong> protection, and deep usage insights.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="releases/FocusShield_v1.0.apk"
+                   class="w-full sm:w-auto bg-slate-900 hover:bg-blue-600 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-download"></i>
+                    Download APK
+                </a>
+                <a href="#how-to-install" class="text-slate-500 hover:text-slate-900 font-semibold flex items-center gap-2">
+                    How to install <i class="fa-solid fa-arrow-down text-sm"></i>
+                </a>
+            </div>
+
+            <p class="mt-6 text-sm text-slate-400">Secure & Ad-free • Android 8.0+</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fas fa-lock text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Strict Mode 🔒</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Once enabled, you cannot deactivate the shield until your goal is met. No more impulsive cheating.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="group">
+                    <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-all">
+                        <i class="fas fa-sliders text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Per-App Limits ⏱️</h3>
+                    <h3 class="text-xl font-bold mb-3">Per-App Limits ⏱️</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Set specific time budgets for every app. 15m for Reels, 30m for Games. You decide.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="group">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                        <i class="fas fa-battery-full text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Battery Optimized 🔋</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Built with Kotlin Coroutines to ensure zero lag and minimal battery impact while monitoring.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section id="how-to-install" class="py-20 px-6 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-black mb-10 text-center text-blue-600">Installation Guide</h2>
+            <div class="space-y-6">
+                <div class="flex gap-6 items-start p-6 glass rounded-2xl border border-slate-200">
+                    <span class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</span>
+                    <div>
+                        <h4 class="font-bold mb-1">Download APK</h4>
+                        <p class="text-slate-600 text-sm">Click the download button above to get the latest APK file.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 glass rounded-2xl border border-slate-200">
+                    <span class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</span>
+                    <div>
+                        <h4 class="font-bold mb-1">Allow Unknown Sources</h4>
+                        <p class="text-slate-600 text-sm">When prompted, allow your browser to "Install unknown apps" in Android settings.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start p-6 glass rounded-2xl border border-slate-200">
+                    <span class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</span>
+                    <div>
+                        <h4 class="font-bold mb-1">Setup Permissions</h4>
+                        <p class="text-slate-600 text-sm">Open the app and follow the 3-step checklist to enable Usage Access, Overlay, and Battery Exemption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 opacity-50 grayscale">
+                <div class="w-6 h-6 bg-slate-900 rounded flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-white text-[10px]"></i>
+                </div>
+                <span class="font-bold">Focus Shield</span>
+            </div>
+            <p class="text-slate-400 text-sm">Developed with <i class="fa-solid fa-heart text-red-400"></i> for productivity.</p>
+            <div class="flex gap-6">
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
